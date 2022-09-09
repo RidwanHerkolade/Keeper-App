@@ -1,0 +1,117 @@
+* {
+  padding: 0rem;
+  margin: 0rem;
+  font-family: var(--font-family);
+
+}
+:root {
+  --color-yellow: rgb(87,98,255);
+  --color-white: white;
+  --color-form: rgb(20,21,34);
+  --color-black: rgb(123,5,251);
+  --font-family: 'Montserrat', sans-serif;
+  --font-familys: 'Pacifico', cursive;
+  --font-size: 20px;
+  --font-small: 10px;
+  --font-smalls: 14px;
+  --box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+body {
+  background: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+}
+header {
+    display: flex;
+    height: 10vh;
+    background-color: var(--color-black);
+
+}
+nav {
+  margin-left: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+h1 {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: var(--font-size);
+}
+.form__group {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+
+}
+.form__groups {
+  display: flex;
+
+  justify-content: center;
+  box-shadow: var(--box-shadow);
+  width: 20rem;
+}
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+input {
+  border: none;
+  width: 18rem;
+  height: 2rem;
+  outline: none;
+
+}
+textarea {
+  border: none;
+  outline: none;
+  width: 18rem;
+  height: 4rem;
+  resize: none;
+
+}
+button {
+ height: 1rem;
+ border-radius: 6rem;
+ border: none;
+ padding: 1.5rem;
+ width: 2.5rem;
+ color: var(--color-white);
+ background: var(--color-black);
+ display: flex;
+ justify-content: center;
+ position: relative;
+ font-weight: 600;
+ text-transform: capitalize;
+ left: 12rem;
+ cursor: pointer;
+ top: 1rem;
+ align-items: center;
+ font-size: var(--font-small);
+}
+span {
+  font-size: var(--font-smalls);
+  text-transform: capitalize;
+  color: var(--color-black);
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.note__div {
+ 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.form__groups {
+  display: flex;
+  justify-content: center;
+  box-shadow: var(--box-shadow);
+  width: 20rem;
+}
+
