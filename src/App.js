@@ -4,31 +4,35 @@ import Form from './component/Form';
 import './App.css';
 import Note from './component/Note';
 
-
 function App() {
-  const [notes, setNotes] = useState([])
+  const [notes, setNotes] = useState([]);  
   
+  // ADDING A CONDITIONAL STATEMENT INCASE IF AN EMPTY FIELD IS SUBMITTED
   function addInput(userInput) {
     if(userInput.input === "" || userInput.textArea === "") {
       alert("Fill in your details");
       return
     }
-    setNotes(prevNote => {
+    setNotes(prevNotes => {
       return[
-          ...prevNote, userInput,
+             ...prevNotes, 
+             userInput,
      ];
-  
-})
+  })
      
-  }
-  function onDelete(id){
-     
-      setNotes(prevNote => {
-        prevNote.filter((note, index) => {
-          return index !==id;
-        })
+  };
+
+  //  THE DELETE BUTTON FUNCTIONALITY
+  function deleteNote(id){
+      setNotes(prevNotes => {
+        return (
+          prevNotes.filter((note, index) => {
+            return index !== id;
+          })
+        )
+      
       })
-  }
+  };
  
    
   return (
@@ -37,7 +41,6 @@ function App() {
           <Form 
              onAdd={addInput}
     
-          
           />
        
           <div className="note__div">
@@ -48,7 +51,7 @@ function App() {
                            id={index}
                            input={note.input}
                            textArea={note.textArea}
-                           onDelete= {onDelete}
+                           onDelete= {deleteNote}
                        
                        />
                      )
@@ -59,5 +62,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

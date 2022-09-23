@@ -5,14 +5,10 @@ function Header(){
      return(
           <header>
               <nav>
-                
                   <h1>  <HighlightIcon/>Keeper</h1>
               </nav>
-          
           
           </header>
      )
 }
-
-
 export default Header;

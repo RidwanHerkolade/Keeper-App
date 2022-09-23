@@ -2,14 +2,16 @@ import React from "react";
 import DeleteIcon from '@mui/icons-material/Delete';
 
 
-function handleClick(props){
+function Note(props){
+  
+function handleDelete(e){
+  e.preventDefault()
   props.onDelete(props.id)
 }
 
-function Note(props){
   return (
       <div className="form__groups">
-         <form>
+         <form onSubmit={handleDelete}>
             <input
 
                  type="text"
@@ -21,7 +23,7 @@ function Note(props){
                      placeholder={props.textArea}
        
             />
-            <button className="delete" onClick={handleClick}>
+            <button className="delete">
             <DeleteIcon/>
                
             
